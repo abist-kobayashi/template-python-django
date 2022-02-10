@@ -1,15 +1,23 @@
 tasks:
-  - init: |
+  - name: install dependancies
+    init: |
       python -m pip install --upgrade pip
       python -m pip install Django
+  - name: set up PATH
+    init: |
+      export PATH=$PATH:/home/gitpod/.pyenv/versions/3.8.12/bin
+      export PYTHONPATH=$PYTHONPATH:/home/gitpod/.pyenv/versions/3.8.12/lib/python3.8/site-packages/
+  - name: migrate 
+    init: |
       python manage.py migrate
+  - name: start server
     command: |
       python manage.py runserver
 
 ports:
   - port: 8000
     visibility: private
-    onOpen: open-browser
+    onOpen: open-preview
 
 vscode:
   extensions:
