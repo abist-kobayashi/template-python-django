@@ -6,7 +6,8 @@ tasks:
   - name: set up PATH
     init: |
       export PATH=$PATH:/home/gitpod/.pyenv/versions/3.8.12/bin
-      export PYTHONPATH=$PYTHONPATH:/home/gitpod/.pyenv/versions/3.8.12/lib/python3.8/site-packages/
+      export PYTHONPATH=$PYTHONPATH:/home/gitpod/.pyenv/versions/3.8.12/lib/python3.8/site-packages
+      source ~/.bashrc.d/60-python
   - name: migrate 
     init: |
       python manage.py migrate
