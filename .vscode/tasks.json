@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0", 
+    "tasks": [
+        {
+            "label": "Python: Django Polls Test",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "${workspaceFolder}/manage.py",
+                "test",
+                "polls"
+            ],
+        }
+    ]
+}
