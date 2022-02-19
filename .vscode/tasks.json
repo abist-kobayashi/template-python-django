@@ -4,8 +4,10 @@
         {
             "label": "Python: Django Polls Test",
             "type": "shell",
-            "command": "python",
+            "command": "poetry",
             "args": [
+                "run",
+                "python",
                 "${workspaceFolder}/manage.py",
                 "test",
                 "polls"
